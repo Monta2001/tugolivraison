@@ -3,21 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tugo – Livraison d’épicerie</title>
+  <title>Tugo – Livraison d'épicerie</title>
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; background: #f8f8f8; }
-    header { background: #2a9d8f; color: white; padding: 20px; }
-    img { width: 200px; margin-top: 20px; }
-    button { background: #e76f51; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+    body { margin: 0; font-family: Arial, sans-serif; color: #333; }
+    header { background: #fff; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    header img { height: 40px; }
+    nav a { margin-left: 20px; text-decoration: none; color: #333; font-weight: bold; }
+    .hero { background: url('https://images.unsplash.com/photo-1606788075761-9d06d8ddfb7c') center/cover no-repeat; color: white; text-align: center; padding: 120px 20px; }
+    .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+    .hero p { font-size: 1.2rem; margin-bottom: 30px; }
+    .btn { background: #2ecc71; color: white; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; }
+    .section { padding: 80px 20px; text-align: center; }
+    .section h2 { font-size: 2rem; margin-bottom: 20px; }
+    .services { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+    .card { background: #f9f9f9; padding: 30px; border-radius: 10px; width: 250px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    form { max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+    input, textarea { padding: 15px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; }
+    button { background: #2ecc71; color: white; border: none; padding: 15px; font-size: 1rem; border-radius: 5px; cursor: pointer; }
+    footer { background: #333; color: white; text-align: center; padding: 30px 20px; margin-top: 50px; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Bienvenue chez Tugo</h1>
-    <p>Votre épicerie livrée à domicile à Montréal 🚚</p>
+    <img src="https://i.ibb.co/7r6C2cH/tugo-logo.png" alt="Tugo Logo">
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#partenaires">Partenaires</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
-  <img src="logo.png" alt="Logo Tugo">
-  <p>Commandez vos produits locaux facilement et rapidement.</p>
-  <button>Commander maintenant</button>
+
+  <section class="hero">
+    <h1>Tugo – Votre épicerie livrée à domicile</h1>
+    <p>Des produits locaux, une livraison rapide, et un service fiable.</p>
+    <a href="#contact" class="btn">Commander maintenant</a>
+  </section>
+
+  <section id="services" class="section">
+    <h2>Nos Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>🚚 Livraison rapide</h3>
+        <p>Recevez vos courses le jour même, directement chez vous.</p>
+      </div>
+      <div class="card">
+        <h3>🥦 Produits locaux</h3>
+        <p>Partenariat avec les commerces de votre quartier.</p>
+      </div>
+      <div class="card">
+        <h3>💳 Paiement sécurisé</h3>
+        <p>Paiement simple et fiable, en ligne ou à la livraison.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="partenaires" class="section">
+    <h2>Nos Partenaires</h2>
+    <p>Nous travaillons avec des épiceries et commerces locaux pour vous garantir la fraîcheur et la qualité.</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contactez-nous</h2>
+    <form action="https://formspree.io/f/xqakjdzo" method="POST">
+      <input type="text" name="name" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <textarea name="message" rows="5" placeholder="Votre message"></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Tugo – Livraison d'épicerie à Montréal</p>
+  </footer>
 </body>
 </html>
